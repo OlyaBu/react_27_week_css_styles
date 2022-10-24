@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Card from './components/card';
+import './components/card.css';
 
-function App() {
+const array=[
+  {title:"Безлимит 350",
+    price:"350",
+    speed:"до 10 мб/сек",
+  discription:"Объем включенного трафика не ограничен",
+},
+{title:"Безлимит 450",
+price:"450",
+speed:"до 0 мб/сек",
+discription:"Объем включенного трафика не ограничен",
+},
+{title:"Безлимит 550",
+price:"550",
+speed:"до 10 мб/сек",
+discription:"Объем включенного трафика не ограничен",
+},
+{title:"Безлимит 1000",
+price:"1000",
+speed:"до 10 мб/сек",
+discription:"Объем включенного трафика не ограничен",
+},
+];
+
+export default function App(props) {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{
+  array.map((item) =>
+  <Card title={item.title} price={item.price} 
+  speed={item.speed} discription={item.discription}></Card>
+  )
+}
     </div>
-  );
+  )
 }
 
-export default App;
+
