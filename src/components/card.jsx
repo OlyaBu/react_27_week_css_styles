@@ -1,22 +1,21 @@
-import React from "react"
-import './card.css'
+import React from "react";
+import style from './card.css';
 
 
 export default function Card (props) {
-    const {title,discription,price,speed}= props;
+    const {title,discription,price,speed,backgroundColor,isSelected}= props;
     return(
-        <div className="card">
-   
-
-            <h4 className="card-title">{title}</h4>
-            <div className="card-price"> {price}
-            <p className="card-speed-cur">руб</p>
+<div className={isSelected ? style.selectedCard : style.card}>   
+<div className="card-header" style={{backgroundColor: backgroundColor}}>
+            <h4 className={style.card_title}>{title}</h4>
+            <div className={style.card_price}> {price}
+            <p className={style.card_speed_cur}>руб</p>
             </div>
+            </div>
+        <div className= {style.card_footer}>
+        <p className={style.card_speed}>{speed}</p>
        
-        <div className="card-footer">
-        <p className="card-speed">{speed}</p>
-       
-            <p className="card-text">{discription}</p>
+            <p className={style.card_text}>{discription}</p>
             </div>
     </div>
     )

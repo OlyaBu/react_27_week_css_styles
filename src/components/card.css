@@ -1,25 +1,56 @@
 
+
 .card{
-width: 20%;
-margin: 10px;
-border: 1px solid rgb(70, 63, 63);
-;
-height: 300px;
-}
-.card-price{
-    font-size: 60px;
-    height: 40%;
-    font-weight: bolder;
-    border-bottom: 1px solid rgb(70, 63, 63);
-    border-top: 1px solid rgb(70, 63, 63);
+    width: 25%;
+    border: 1px solid rgb(234, 232, 232);
+    background-color:#D3D3D3;
+    height: 350px;
+    
+    }
+    .card_price{
+        font-size: 60px;
+        height: 50%;
+        font-weight: bold;
+        color:rgb(234, 232, 232);
+        border-bottom: 1px solid rgb(234, 232, 232);
+        border-top: 1px solid rgb(234, 232, 232);
+    
+    }
 
-}
-.card-speed-cur{
-font-size: small;
-text-align: end;
-
-
-}
-.card-speed{
-    border-bottom: 1px solid rgb(70, 63, 63);
-}
+    .card_title{
+    color: rgb(234, 232, 232);
+    margin: 0%;
+    height: 10vh;
+    padding: 5%;
+    text-align: center;
+    }
+    .card_speed_cur{
+    font-size: small;
+    text-align: end;
+    padding-right: 2%;
+    }
+  
+    
+    .card_text{
+        background-color: #A9A9A9;
+        height: 80px;
+        text-align: center;
+    }
+    .card_footer{
+        background-color: #D3D3D3;
+    }
+    .selectedCard:hover {
+        -o-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);  
+        transform: translateY(-20px);
+        box-shadow: 10px 5px 5px rgb(106, 115, 119);
+       
+    }
+    .selectedCard{
+        width: 25%;
+    border: 1px solid rgb(234, 232, 232);
+    background-color:#D3D3D3;
+    height: 350px;  
+    }
