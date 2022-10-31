@@ -39,7 +39,7 @@ export default function App(props) {
   <Card title={item.title} price={item.price} 
   speed={item.speed} discription={item.discription} backgroundColor={item.backgroundColor} 
   isSelected={item.isSelected}
-  ></Card>
+  />
   )
 }
     </div>
