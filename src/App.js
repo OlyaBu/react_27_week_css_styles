@@ -20,7 +20,6 @@ price:"550",
 speed:"до 50 мб/сек",
 discription:"Объем включенного трафика не ограничен",
 backgroundColor:"rgb(205, 92, 92)",
-isSelected: true,
 },
 {title:"Безлимит 1000",
 price:"1000",
@@ -31,14 +30,13 @@ backgroundColor:"rgb(	20, 13, 25)",
 ];
 
 export default function App(props) {
- 
   return (
     <div className={styles.App}>
 {
   array.map((item) =>
   <Card title={item.title} price={item.price} 
   speed={item.speed} discription={item.discription} backgroundColor={item.backgroundColor} 
-  isSelected={item.isSelected}
+ 
   />
   )
 }

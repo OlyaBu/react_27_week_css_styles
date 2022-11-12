@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState} from "react";
 import style from './card.css';
 
 
+
 export default function Card (props) {
-    const {title,discription,price,speed,backgroundColor,isSelected}= props;
+    const {title,discription,price,speed,backgroundColor}= props;
+    const [isSelected, setisSelected] =useState(false);
+
+      }; 
+    let className = "card";
+    if (isSelected) { className =+ 'selectedCard';}
+
+    const onClick= () => {
+        setisSelected(!isSelected)
+        }
+ 
     return(
-<div className={isSelected ? style.selectedCard : style.card}>   
+<div className={isSelected ? style.card :  style.selectedCard }>   
 <div className="card-header" style={{backgroundColor: backgroundColor}}>
             <h4 className={style.card_title}>{title}</h4>
             <div className={style.card_price}> {price}
@@ -16,7 +27,9 @@ export default function Card (props) {
         <p className={style.card_speed}>{speed}</p>
        
             <p className={style.card_text}>{discription}</p>
+            <button onClick={onClick}> {isSelected ? "В корзине"  : "Купить"} </button>
             </div>
+           
     </div>
     )
 }
