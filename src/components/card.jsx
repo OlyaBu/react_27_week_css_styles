@@ -7,7 +7,7 @@ export default function Card (props) {
     const {title,discription,price,speed,backgroundColor}= props;
     const [isSelected, setisSelected] =useState(false);
 
-      }; 
+       
     let className = "card";
     if (isSelected) { className =+ 'selectedCard';}
 

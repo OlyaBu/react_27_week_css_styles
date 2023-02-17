@@ -35,13 +35,11 @@ export default function App(props) {
 {
   array.map((item) =>
   <Card title={item.title} price={item.price} 
-  speed={item.speed} discription={item.discription} backgroundColor={item.backgroundColor} 
- 
-  />
+  speed={item.speed} discription={item.discription} backgroundColor={item.backgroundColor} />
   )
 }
     </div>
   )
-}
+};
 
 
